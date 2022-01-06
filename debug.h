@@ -100,7 +100,7 @@ extern uint8_t g_ucSlaveCh;
 #define LOG_ERROR(...) 
 #endif
 
-#if LOG_LEVEL >= NO_LOGS
+#if LOG_LEVEL >= NO_LOG
 //ORIG #define LOG_IF_ERROR(condition, message, args...) if (condition) PRINTFUNCTION(LOG_FMT message NEWLINE, LOG_ARGS(ERROR_TAG), ## args)
 #define LOG_IF_ERROR(...)     do { DbgPrint(PSTR("#%d:C=(%s:%d) "), g_ucSlaveCh, __FILE__, __LINE__); DbgPrint(__VA_ARGS__); } while(0)
 #else
