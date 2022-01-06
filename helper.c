@@ -75,3 +75,11 @@ void LIMIT_INT16(int16_t *param, int16_t min, int16_t max)
 	else if (*param < min)
 	*param = min;
 }
+
+void LIMIT_UINT16(uint16_t *param, uint16_t min, uint16_t max)
+{
+    if (*param > max)
+        *param = max;
+    else if (*param < min)
+        *param = min;
+}
